@@ -17,9 +17,7 @@ function onValueInput(evt) {
 function onFormSubmit(evt) {
   evt.preventDefault();
   const formDataParse = JSON.parse(localStorage.getItem(STORAGE_KEY));
-  const formEmail = formDataParse.email;
-  const formMsg = formDataParse.message;
-  console.log(`'Email:', ${formEmail}, 'Message:', ${formMsg}`);
+  console.log(formDataParse);
 
   evt.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
